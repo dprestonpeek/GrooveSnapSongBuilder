@@ -12,22 +12,19 @@ using System.Windows.Forms;
 
 namespace GrooveSnapSongBuilder
 {
-    public partial class Form1 : Form
+    public partial class GP2MidiConvert : Form
     {
-        string title { get { return title; } set { title = value; error.Title = value; } }
-        string message { get { return message; } set { message = value; error.Message = value; } }
-
         string gpFile = "";
         string outFile = "";
         string museScoreExe = "";
-        MuseScoreError error;
-        public Form1()
+        ErrorWindow error;
+        public GP2MidiConvert()
         {
             InitializeComponent();
             openFileDialog1.FileOk += GPFileSelected;
             saveFileDialog1.FileOk += MidiFileSelected;
             museScoreExe = Path.Combine(Environment.ExpandEnvironmentVariables("%ProgramW6432%"), "MuseScore 3", "bin", "MuseScore3.exe");
-            error = new MuseScoreError();
+            error = new ErrorWindow();
         }
 
         private void GPFileSelected(object sender, CancelEventArgs e)

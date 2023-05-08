@@ -1,7 +1,7 @@
 ﻿
 namespace GrooveSnapSongBuilder
 {
-    partial class MuseScoreError
+    partial class ErrorWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace GrooveSnapSongBuilder
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MuseScoreError));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ErrorWindow));
             this.button1 = new System.Windows.Forms.Button();
             this.MessageBox = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -52,8 +52,9 @@ namespace GrooveSnapSongBuilder
             this.MessageBox.Size = new System.Drawing.Size(321, 15);
             this.MessageBox.TabIndex = 1;
             this.MessageBox.Text = "Please install MuseScore 3 to C:\\Program Files\\MuseScore 3";
+            this.MessageBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // MuseScoreError
+            // ErrorWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -61,7 +62,7 @@ namespace GrooveSnapSongBuilder
             this.Controls.Add(this.MessageBox);
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "MuseScoreError";
+            this.Name = "ErrorWindow";
             this.Text = "Error";
             this.ResumeLayout(false);
             this.PerformLayout();

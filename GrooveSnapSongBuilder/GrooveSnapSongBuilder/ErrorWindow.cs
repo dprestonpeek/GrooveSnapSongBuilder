@@ -8,15 +8,23 @@ using System.Windows.Forms;
 
 namespace GrooveSnapSongBuilder
 {
-    public partial class MuseScoreError : Form
+    public partial class ErrorWindow : Form
     {
-        public string Title;
-        public string Message;
-        public MuseScoreError()
+        public ErrorWindow()
         {
             InitializeComponent();
-            Text = Title;
-            MessageBox.Text = Message;
+        }
+
+        public void ShowError(string message)
+        {
+            ShowMessage("Error", message);
+        }
+
+        public void ShowMessage(string title, string message)
+        {
+            Text = title;
+            MessageBox.Text = message;
+            ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)

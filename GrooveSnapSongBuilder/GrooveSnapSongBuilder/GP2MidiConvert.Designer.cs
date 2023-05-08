@@ -1,7 +1,7 @@
 ﻿
 namespace GrooveSnapSongBuilder
 {
-    partial class Form1
+    partial class GP2MidiConvert
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,7 +29,7 @@ namespace GrooveSnapSongBuilder
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GP2MidiConvert));
             this.BrowseTabButton = new System.Windows.Forms.Button();
             this.TabFilePath = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -165,7 +165,7 @@ namespace GrooveSnapSongBuilder
             this.progressBar1.TabIndex = 16;
             this.progressBar1.Visible = false;
             // 
-            // Form1
+            // GP2MidiConvert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -183,7 +183,7 @@ namespace GrooveSnapSongBuilder
             this.Controls.Add(this.BrowseTabButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "GP2MidiConvert";
             this.Text = "GrooveSnap GP->Midi";
             this.ResumeLayout(false);
             this.PerformLayout();
