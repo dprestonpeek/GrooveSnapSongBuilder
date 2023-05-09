@@ -60,6 +60,8 @@ namespace GrooveSnapSongBuilder
             // 
             // FilesList
             // 
+            this.FilesList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.FilesList.FormattingEnabled = true;
             this.FilesList.ItemHeight = 15;
             this.FilesList.Location = new System.Drawing.Point(12, 27);
@@ -69,6 +71,7 @@ namespace GrooveSnapSongBuilder
             // 
             // AddFiles
             // 
+            this.AddFiles.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.AddFiles.Location = new System.Drawing.Point(214, 142);
             this.AddFiles.Name = "AddFiles";
             this.AddFiles.Size = new System.Drawing.Size(75, 23);
@@ -123,6 +126,8 @@ namespace GrooveSnapSongBuilder
             // 
             // BuildButton
             // 
+            this.BuildButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.BuildButton.Location = new System.Drawing.Point(12, 240);
             this.BuildButton.Name = "BuildButton";
             this.BuildButton.Size = new System.Drawing.Size(277, 23);
@@ -133,6 +138,8 @@ namespace GrooveSnapSongBuilder
             // 
             // CheckMaterialsButton
             // 
+            this.CheckMaterialsButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CheckMaterialsButton.Location = new System.Drawing.Point(12, 211);
             this.CheckMaterialsButton.Name = "CheckMaterialsButton";
             this.CheckMaterialsButton.Size = new System.Drawing.Size(277, 23);
@@ -178,6 +185,7 @@ namespace GrooveSnapSongBuilder
             // 
             // AddInfoFileButton
             // 
+            this.AddInfoFileButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.AddInfoFileButton.Location = new System.Drawing.Point(158, 182);
             this.AddInfoFileButton.Name = "AddInfoFileButton";
             this.AddInfoFileButton.Size = new System.Drawing.Size(131, 23);

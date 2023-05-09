@@ -207,6 +207,8 @@ namespace GrooveSnapSongBuilder
         {
             if (CheckMaterials())
             {
+                string[] info = GetInfoStrings(infoFile);
+                saveFileDialog1.FileName = info[0] + " - " + info[1];
                 saveFileDialog1.ShowDialog();
             }
         }
