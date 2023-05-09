@@ -43,6 +43,10 @@ namespace GrooveSnapSongBuilder
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.OpenDir = new System.Windows.Forms.CheckBox();
             this.openZipDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.AddDrumMapButton = new System.Windows.Forms.Button();
+            this.AddInfoFileButton = new System.Windows.Forms.Button();
+            this.saveDrumMapDialog = new System.Windows.Forms.SaveFileDialog();
+            this.saveInfoDialog = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // label1
@@ -97,7 +101,7 @@ namespace GrooveSnapSongBuilder
             // 
             this.GP2MidiButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.GP2MidiButton.Location = new System.Drawing.Point(12, 317);
+            this.GP2MidiButton.Location = new System.Drawing.Point(12, 336);
             this.GP2MidiButton.Name = "GP2MidiButton";
             this.GP2MidiButton.Size = new System.Drawing.Size(277, 23);
             this.GP2MidiButton.TabIndex = 5;
@@ -109,7 +113,7 @@ namespace GrooveSnapSongBuilder
             // 
             this.UnpackExistingButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.UnpackExistingButton.Location = new System.Drawing.Point(12, 288);
+            this.UnpackExistingButton.Location = new System.Drawing.Point(12, 307);
             this.UnpackExistingButton.Name = "UnpackExistingButton";
             this.UnpackExistingButton.Size = new System.Drawing.Size(277, 23);
             this.UnpackExistingButton.TabIndex = 6;
@@ -119,7 +123,7 @@ namespace GrooveSnapSongBuilder
             // 
             // BuildButton
             // 
-            this.BuildButton.Location = new System.Drawing.Point(12, 211);
+            this.BuildButton.Location = new System.Drawing.Point(12, 240);
             this.BuildButton.Name = "BuildButton";
             this.BuildButton.Size = new System.Drawing.Size(277, 23);
             this.BuildButton.TabIndex = 7;
@@ -129,7 +133,7 @@ namespace GrooveSnapSongBuilder
             // 
             // CheckMaterialsButton
             // 
-            this.CheckMaterialsButton.Location = new System.Drawing.Point(12, 182);
+            this.CheckMaterialsButton.Location = new System.Drawing.Point(12, 211);
             this.CheckMaterialsButton.Name = "CheckMaterialsButton";
             this.CheckMaterialsButton.Size = new System.Drawing.Size(277, 23);
             this.CheckMaterialsButton.TabIndex = 8;
@@ -151,7 +155,7 @@ namespace GrooveSnapSongBuilder
             this.OpenDir.AutoSize = true;
             this.OpenDir.Checked = true;
             this.OpenDir.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.OpenDir.Location = new System.Drawing.Point(13, 241);
+            this.OpenDir.Location = new System.Drawing.Point(13, 270);
             this.OpenDir.Name = "OpenDir";
             this.OpenDir.Size = new System.Drawing.Size(182, 19);
             this.OpenDir.TabIndex = 9;
@@ -162,11 +166,43 @@ namespace GrooveSnapSongBuilder
             // 
             this.openZipDialog2.FileName = "openFileDialog2";
             // 
+            // AddDrumMapButton
+            // 
+            this.AddDrumMapButton.Location = new System.Drawing.Point(12, 182);
+            this.AddDrumMapButton.Name = "AddDrumMapButton";
+            this.AddDrumMapButton.Size = new System.Drawing.Size(131, 23);
+            this.AddDrumMapButton.TabIndex = 10;
+            this.AddDrumMapButton.Text = "Add Drum Map";
+            this.AddDrumMapButton.UseVisualStyleBackColor = true;
+            this.AddDrumMapButton.Click += new System.EventHandler(this.AddDrumMapButton_Click);
+            // 
+            // AddInfoFileButton
+            // 
+            this.AddInfoFileButton.Location = new System.Drawing.Point(158, 182);
+            this.AddInfoFileButton.Name = "AddInfoFileButton";
+            this.AddInfoFileButton.Size = new System.Drawing.Size(131, 23);
+            this.AddInfoFileButton.TabIndex = 11;
+            this.AddInfoFileButton.Text = "Add Info File";
+            this.AddInfoFileButton.UseVisualStyleBackColor = true;
+            this.AddInfoFileButton.Click += new System.EventHandler(this.AddInfoFileButton_Click);
+            // 
+            // saveDrumMapDialog
+            // 
+            this.saveDrumMapDialog.DefaultExt = "txt";
+            this.saveDrumMapDialog.FileName = "drummap.txt";
+            // 
+            // saveInfoDialog
+            // 
+            this.saveInfoDialog.DefaultExt = "txt";
+            this.saveInfoDialog.FileName = "info.txt";
+            // 
             // SongBuilder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(301, 352);
+            this.ClientSize = new System.Drawing.Size(301, 371);
+            this.Controls.Add(this.AddInfoFileButton);
+            this.Controls.Add(this.AddDrumMapButton);
             this.Controls.Add(this.OpenDir);
             this.Controls.Add(this.CheckMaterialsButton);
             this.Controls.Add(this.BuildButton);
@@ -200,5 +236,9 @@ namespace GrooveSnapSongBuilder
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.CheckBox OpenDir;
         private System.Windows.Forms.OpenFileDialog openZipDialog2;
+        private System.Windows.Forms.Button AddDrumMapButton;
+        private System.Windows.Forms.Button AddInfoFileButton;
+        private System.Windows.Forms.SaveFileDialog saveDrumMapDialog;
+        private System.Windows.Forms.SaveFileDialog saveInfoDialog;
     }
 }

@@ -27,6 +27,8 @@ namespace GrooveSnapSongBuilder
             openFileDialog1.FileOk += AddFile;
             saveFileDialog1.FileOk += BuildGSFile;
             openZipDialog2.FileOk += ZipFileOK;
+            saveDrumMapDialog.FileOk += CreateDrumMap;
+            saveInfoDialog.FileOk += CreateInfoFile;
         }
 
         private void AddFiles_Click(object sender, EventArgs e)
@@ -266,6 +268,38 @@ namespace GrooveSnapSongBuilder
         {
             GP2MidiConvert window = new GP2MidiConvert();
             window.Show();
+        }
+
+        private void AddDrumMapButton_Click(object sender, EventArgs e)
+        {
+            saveDrumMapDialog.ShowDialog();
+        }
+
+        private void AddInfoFileButton_Click(object sender, EventArgs e)
+        {
+            saveInfoDialog.ShowDialog();
+        }
+
+        private void CreateInfoFile(object sender, CancelEventArgs e)
+        {
+            string file = saveInfoDialog.FileName;
+            if (!File.Exists(file))
+            {
+                File.WriteAllText(file, Properties.Resources.info);
+            }
+            string newInfoFile = Path.Combine(Path.GetDirectoryName(file), "info.txt");
+            FilesList.Items.Add(newInfoFile);
+        }
+
+        private void CreateDrumMap(object sender, CancelEventArgs e)
+        {
+            string file = saveDrumMapDialog.FileName;
+            if (!File.Exists(file))
+            {
+                File.WriteAllText(file, Properties.Resources.drummap);
+            }
+            string newInfoFile = Path.Combine(Path.GetDirectoryName(file), "drummap.txt");
+            FilesList.Items.Add(newInfoFile);
         }
     }
 }
