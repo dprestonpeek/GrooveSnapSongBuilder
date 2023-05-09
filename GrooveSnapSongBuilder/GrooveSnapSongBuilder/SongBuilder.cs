@@ -248,6 +248,10 @@ namespace GrooveSnapSongBuilder
                 error.ShowError("An error occurred and your .gs file was not built. I am deeply sorry.");
                 return;
             }
+            if (Directory.Exists(tempPath))
+            {
+                Directory.Delete(tempPath, true);
+            }
         }
 
         private void UnpackExistingButton_Click(object sender, EventArgs e)
