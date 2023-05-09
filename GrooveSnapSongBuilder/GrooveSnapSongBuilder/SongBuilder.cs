@@ -50,11 +50,13 @@ namespace GrooveSnapSongBuilder
         private void DeleteFiles_Click(object sender, EventArgs e)
         {
             FilesList.Items.Remove(FilesList.SelectedItems);
+            FilesList.Update();
         }
 
         private void ClearFiles_Click(object sender, EventArgs e)
         {
             FilesList.Items.Clear();
+            FilesList.Update();
         }
 
         private void CheckMaterialsButton_Click(object sender, EventArgs e)
@@ -217,9 +219,10 @@ namespace GrooveSnapSongBuilder
         {
             string outFile = saveFileDialog1.FileName;
             string[] infoStrings = GetInfoStrings(infoFile);
-            string tempPath = Path.Combine(Path.GetDirectoryName(outFile), infoStrings[0], infoStrings[1]);
             string artist = infoStrings[0];
             string song = infoStrings[1];
+            string tempPathArtist = Path.Combine(Path.GetDirectoryName(outFile), artist);
+            string tempPath = Path.Combine(tempPathArtist, song);
             if (!Directory.Exists(tempPath))
             {
                 Directory.CreateDirectory(tempPath);
@@ -250,7 +253,7 @@ namespace GrooveSnapSongBuilder
             }
             if (Directory.Exists(tempPath))
             {
-                Directory.Delete(tempPath, true);
+                Directory.Delete(tempPathArtist, true);
             }
         }
 
